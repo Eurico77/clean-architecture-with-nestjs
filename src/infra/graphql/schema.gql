@@ -1,0 +1,99 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type BannerSectionType {
+  id: ID!
+  minPrice: Float!
+  videoUrl: String!
+  heading: String!
+  subHeading: String!
+}
+
+type ImageType {
+  url: String!
+  alternativeText: String!
+}
+
+type BenefitType {
+  name: String!
+  description: String!
+  image: ImageType!
+}
+
+type BenefitsSectionType {
+  benefits: [BenefitType!]!
+  heading: String!
+  subHeading: String!
+  id: ID!
+}
+
+type StepType {
+  name: String!
+  description: String!
+}
+
+type HowItWorksSectionType {
+  minPrice: Float!
+  steps: [StepType!]!
+  heading: String!
+  subHeading: String!
+}
+
+type BaseSectionType {
+  heading: String!
+  subHeading: String!
+}
+
+type BaseTableType {
+  name: String!
+  privateNetwork: Float!
+  vidaV: Float!
+}
+
+type PricesSectionType {
+  specialtiesHeading: String!
+  specialties: [BaseTableType!]!
+  examsHeading: String!
+  exams: [BaseTableType!]!
+  heading: String!
+  subHeading: String!
+}
+
+type DrugstoreType {
+  name: String!
+  url: String!
+  image: ImageType!
+}
+
+type DrugstoresSectionType {
+  drugstores: [DrugstoreType!]!
+  heading: String!
+  subHeading: String!
+}
+
+type TelemedicineSectionType {
+  minPrice: Float!
+  features: [String!]!
+  heading: String!
+  subHeading: String!
+}
+
+type HomePageDto {
+  id: ID!
+  bannerSection: BannerSectionType!
+  benefitsSection: BenefitsSectionType!
+  howItWorksSection: HowItWorksSectionType!
+  subscriptionsSection: BaseSectionType!
+  pricesSection: PricesSectionType!
+  drugstoresSection: DrugstoresSectionType!
+  telemedicineSection: TelemedicineSectionType!
+  heading: String!
+  createdAt: String!
+  publishedAt: String!
+  updatedAt: String!
+}
+
+type Query {
+  getHomePage: HomePageDto!
+}
